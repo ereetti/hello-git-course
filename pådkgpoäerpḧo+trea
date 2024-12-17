@@ -1,0 +1,51 @@
+[1mdiff --git a/basics/mergesort.py b/basics/mergesort.py[m
+[1mindex 119844c..bf53370 100644[m
+[1m--- a/basics/mergesort.py[m
+[1m+++ b/basics/mergesort.py[m
+[36m@@ -9,12 +9,10 @@[m [mdef debug_print(debug_msg=None, **kwargs):[m
+ [m
+ [m
+ def mergesort(array):[m
+[31m-    debug_print(array=array)[m
+     if len(array) <= 1:[m
+         return array[m
+ [m
+     m = len(array) // 2[m
+[31m-    debug_print(m=m)[m
+ [m
+     left = mergesort(array[:m])[m
+     right = mergesort(array[m:])[m
+[36m@@ -23,8 +21,6 @@[m [mdef mergesort(array):[m
+ [m
+ [m
+ def merge(left, right):[m
+[31m-    debug_print(debug_msg="Merging...", left=left, right=right)[m
+[31m-[m
+     merged = [][m
+ [m
+     while len(left) > 0 and len(right) > 0:[m
+[36m@@ -38,16 +34,12 @@[m [mdef merge(left, right):[m
+     else:[m
+         merged += right[m
+ [m
+[31m-    debug_print(merged=merged)[m
+     return merged[m
+ [m
+ [m
+ if __name__ == "__main__":[m
+     input_str = input("Enter numbers, separated by ',': ")[m
+[31m-[m
+     input_list = input_str.split(",")[m
+[31m-    debug_print(input_list=input_list)[m
+[31m-[m
+     value_list = [][m
+     for x in input_list:[m
+         try:[m
+[36m@@ -56,7 +48,5 @@[m [mif __name__ == "__main__":[m
+             print("Invalid input.")[m
+             quit(1)[m
+ [m
+[31m-    debug_print(value_list=value_list)[m
+[31m-[m
+     sorted_list = mergesort(value_list)[m
+     print(sorted_list)[m
